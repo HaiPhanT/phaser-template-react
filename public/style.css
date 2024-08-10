@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #000000; 
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -45,4 +45,30 @@ body {
         border: 1px solid rgba(255, 255, 255, 0.3);
         color: rgba(255, 255, 255, 0.3);
     }
+}
+
+.button-container {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-container .button:nth-child(1) {
+    grid-area: up;
+}
+
+.button-container .button:nth-child(2) {
+    grid-area: down;
+}
+
+.button-container .button:nth-child(3) {
+    grid-area: left;
+}
+
+.button-container .button:nth-child(4) {
+    grid-area: right;
 }
